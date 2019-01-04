@@ -1,0 +1,60 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[twocolumn]{article}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=10mm,
+ top=10mm,
+ }
+
+\usepackage{multicol}
+\usepackage{mathtools}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{cor}{Cor}
+\newcommand{\s}{\hspace{8pt}}
+\title{Discrete-Time Signal Processing Note}
+\date{\today}
+
+\begin{document}
+  \maketitle
+  \section{Signals and Systems}
+  \begin{definition}[\textbf{Discrete-time Signals}]
+     \mbox{are sequences} $$x=\{x[n]\}, \s -\infty < n < \infty $$
+     Let \textbf{analog signal} be $x_\alpha (t)$, then $$x[n] = x_\alpha(nT)$$ 
+     Where $T$ is the \textbf{sampling period} (How long until a point is sampled)
+  \end{definition}
+  
+  \begin{definition}[\textbf{Unit sample sequence}]
+    \[
+        \delta[n] = 
+        \begin{cases}
+            0, \s n \neq 0, \\
+            1, \s n = 0, 
+        \end{cases}
+    \]
+  \end{definition}
+  
+  \begin{definition}[\textbf{Unit step sequence}]
+    \[
+        u[n] = 
+        \begin{cases}
+            1, \s n \geq 0, \\
+            0, \s n < 0
+        \end{cases}
+    \]
+  \end{definition}
+  
+  Note that any sequence can be written as sum of these impulses $$x[n] = \sum_{k=-\infty}^{\infty} x[k] \delta[n - k]$$
+  We also have the following identities:
+  $$u[n] = \sum_{k=0}^{\infty} \delta[n - k]$$
+  $$\delta[n] = u[n+1] - u[n]$$
+  
+  \begin{definition}[\textbf{Discrete Time System}] is an operator $T$ that maps an input sequence $x[n]$ to an output sequence $y[n]$
+    $$y[n] = T\{x[n]\}$$
+  
+  \end{definition}
+\end{document}

@@ -1,0 +1,58 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{tikz}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\newenvironment{defn}[2][]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{Game Theory}
+\maketitle
+ 
+\begin{defn}{Decision Problem} consists of Actions, Outcomes and Preferences (Player's ranking of outcomes).
+\end{defn}
+
+\begin{defn}{Preference relations} $x \succsim y$ means $x$ is at least as good as $y$. $x \succ y$ means $x$ is strictly better than $y$. $x \sim y$ means $x$ and $y$ are equally good. We assume \textbf{completeness axiom} where any two outcomes $x$, $y$ can be ranked as either $x \succsim y$ or $y \succsim x$. $\succsim$ is \textbf{transitive}.
+\end{defn}
+
+\begin{defn}{Payoff function} $u: X \longrightarrow \R$ where $u(x) \geq u(y)$ if and only if $x \succsim y$ for $x, y \in X$.
+\end{defn}
+ 
+\begin{defn}{Decision Tree} The node where player has a make a decision is called \textbf{decision node}. The leaves of the tree where payoff are attached are called terminal nodes.
+\end{defn}
+
+\begin{exercise}{1.3}
+    
+\end{exercise}
+\end{document}
